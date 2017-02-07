@@ -16,7 +16,26 @@
 """
 
 import pickle
+import math
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
 
 
+
+#print (enron_data["SKILLING JEFFREY K"])
+#print (enron_data["FASTOW ANDREW S"])
+#print (enron_data["LAY KENNETH L"])
+#print (len(enron_data["METTS MARK"]))
+e = 0
+s = 0
+for u in enron_data:
+	#print enron_data[u]["email_address"]
+	if enron_data[u]["salary"]!='NaN':
+		s = s+1
+
+	if enron_data[u]["email_address"]!='NaN':
+		e = e+1
+
+
+print s
+print e
